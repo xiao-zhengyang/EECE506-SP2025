@@ -68,7 +68,7 @@ GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads t
     ```bash
     python -m graphrag prompt-tune --root ./ClassDemo --config ./ClassDemo/settings.yaml
     ```
-    *Note: Autotune might occasionally fail with smaller LLMs (<7B). After tuning, review the updated prompt in the GraphRAG prompt folder and, if satisfactory, move it to the ClassDemo prompt folder.*
+    *Note: Autotune might occasionally fail with smaller LLMs (<72B). After tuning, review the updated prompt in the GraphRAG prompt folder and, if satisfactory, move it to the ClassDemo prompt folder.*
 
 14. **Run this command to start the indexing process.**  
     This step may take longer than 1 hour if you do not have a GPU or a powerful CPU. Make sure you turn off auto sleep of your computer. You may complete this in the computer lab in Whitaker Hall. Those computers have an entry level GPU, but they will auto logout if you are away for more than 1 hour.
