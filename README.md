@@ -85,7 +85,7 @@ GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads t
 
     - **Some specific questions (use local query)**
       ```bash
-      graphrag query --root ./ClassDemo --method local --query "How to design penicillin fermentation reactor?"
+      graphrag query --root ./ClassDemo --method local --query "Which hospital did Fleming work at?"
       ```
 
 16. **Use Gephi or other compatible software for knowledge graph visualization.**
