@@ -21,7 +21,8 @@ GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads t
 5. **Install GraphRAG.**  
    Type the following in the terminal
    ```bash
-   pip install graphrag
+   pip install graphrag==1.2.0
+
    ```
 
 6. **Download Qwen2.5-7b-INT4 model (or a larger model if your hardware supports it).**  
