@@ -1,0 +1,141 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BIOTECHNOLOGY" />
+    <node id="GENETIC MANIPULATION" />
+    <node id="PHARMACEUTICALS" />
+    <node id="CHEMICALS" />
+    <node id="BIOENGINEERING" />
+    <node id="BIOLOGICAL ENGINEERING" />
+    <node id="FOOD" />
+    <node id="DIAGNOSTICS" />
+    <node id="METABOLIC ENGINEERING" />
+    <node id="BIOCHEMICAL ENGINEERING" />
+    <node id="BIOREACTION ENGINEERING" />
+    <node id="BIOSEPARATIONS" />
+    <node id="BIOMEDICAL ENGINEERING" />
+    <node id="BIOPROCESS ENGINEERING" />
+    <node id="BIOPROCESS ENGINEER" />
+    <node id="MOLECULAR BIOLOGY" />
+    <node id="MICROBIOLOGY" />
+    <node id="ENGINEERING" />
+    <node id="BIOCHEMISTRY" />
+    <node id="CELL BIOLOGY" />
+    <node id="NUTRIENT SOLUTION" />
+    <node id="STAPHYLOCOCCUS AUREUS" />
+    <node id="ALEXANDER FLEMING" />
+    <node id="PENICILLIN" />
+    <node id="PENICILLIUM NOTATUM" />
+    <node id="HOWARD FLOREY" />
+    <node id="ERNST CHAIN" />
+    <node id="NORMAN HEATLEY" />
+    <node id="FERMENTATION" />
+    <node id="CULTURE TECHNIQUE" />
+    <node id="BACK-EXTRACTION PROCESS" />
+    <node id="PHARMACEUTICAL FIRMS" />
+    <node id="WORLD WAR II" />
+    <node id="BLOOD INFECTION" />
+    <node id="KINETICS OF FERMENTATION" />
+    <node id="FLOREY AND CHAIN" />
+    <node id="USDA NORTHERN REGIONAL RESEARCH LABORATORY" />
+    <node id="CORN STEEP LIQUOR&#8211;LACTOSE-BASED MEDIUM" />
+    <node id="LIFE SCIENTISTS" />
+    <node id="PENICILLIN FERMENTATION BROTH" />
+    <node id="LOW CONCENTRATION" />
+    <node id="PRODUCER STRAINS" />
+    <node id="MERCK" />
+    <node id="FERMENTATION PROCESS" />
+    <node id="PFIZER" />
+    <node id="SQUIBB" />
+    <node id="CHEMICAL SYNTHESIS" />
+    <node id="PILOT-PLANT" />
+    <node id="A. L. ELDER" />
+    <node id="WAR PRODUCTION BOARD" />
+    <node id="NORTHERN REGIONAL RESEARCH LABORATORY" />
+    <node id="PRODUCT RECOVERY" />
+    <node id="PURIFICATION TECHNIQUES" />
+    <node id="PENICILLIUM CHRYSOGENUM" />
+    <node id="PENICILLIN FERMENTATION" />
+    <node id="BRAN METHOD" />
+    <node id="BOTTLE PLANT" />
+    <node id="SUBMERGED TANK PROCESS" />
+    <node id="REACTOR DESIGN" />
+    <node id="ANTIBIOTIC FERMENTERS" />
+    <node id="MICROORGANISMS" />
+    <node id="SUBMERGED FERMENTATION" />
+    <node id="MOLD PHYSIOLOGY" />
+    <node id="METABOLIC PATHWAYS" />
+    <node id="PROCESS CONTROL" />
+    <node id="MULTIDISCIPLINARY COLLABORATION" />
+    <node id="PENICILLIN PROCESS" />
+    <node id="MODERN ANTIBIOTICS" />
+    <node id="RECOMBINANT DNA" />
+    <node id="GENETICALLY ENGINEERED ORGANISM" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC MANIPULATION" />
+    <edge source="BIOTECHNOLOGY" target="PHARMACEUTICALS" />
+    <edge source="BIOTECHNOLOGY" target="CHEMICALS" />
+    <edge source="BIOTECHNOLOGY" target="BIOCHEMICAL ENGINEERING" />
+    <edge source="BIOENGINEERING" target="BIOLOGICAL ENGINEERING" />
+    <edge source="BIOENGINEERING" target="FOOD" />
+    <edge source="BIOENGINEERING" target="DIAGNOSTICS" />
+    <edge source="METABOLIC ENGINEERING" target="BIOCHEMICAL ENGINEERING" />
+    <edge source="BIOCHEMICAL ENGINEERING" target="BIOREACTION ENGINEERING" />
+    <edge source="BIOCHEMICAL ENGINEERING" target="BIOSEPARATIONS" />
+    <edge source="BIOCHEMICAL ENGINEERING" target="BIOMEDICAL ENGINEERING" />
+    <edge source="BIOCHEMICAL ENGINEERING" target="BIOPROCESS ENGINEERING" />
+    <edge source="BIOCHEMICAL ENGINEERING" target="BIOPROCESS ENGINEER" />
+    <edge source="BIOCHEMICAL ENGINEERING" target="ENGINEERING" />
+    <edge source="BIOPROCESS ENGINEER" target="MOLECULAR BIOLOGY" />
+    <edge source="BIOPROCESS ENGINEER" target="MICROBIOLOGY" />
+    <edge source="BIOPROCESS ENGINEER" target="PENICILLIN" />
+    <edge source="BIOPROCESS ENGINEER" target="PENICILLIN PROCESS" />
+    <edge source="BIOPROCESS ENGINEER" target="MODERN ANTIBIOTICS" />
+    <edge source="BIOCHEMISTRY" target="CELL BIOLOGY" />
+    <edge source="NUTRIENT SOLUTION" target="STAPHYLOCOCCUS AUREUS" />
+    <edge source="STAPHYLOCOCCUS AUREUS" target="PENICILLIN" />
+    <edge source="ALEXANDER FLEMING" target="PENICILLIN" />
+    <edge source="PENICILLIN" target="PENICILLIUM NOTATUM" />
+    <edge source="PENICILLIN" target="HOWARD FLOREY" />
+    <edge source="PENICILLIN" target="ERNST CHAIN" />
+    <edge source="PENICILLIN" target="NORMAN HEATLEY" />
+    <edge source="PENICILLIN" target="FERMENTATION" />
+    <edge source="PENICILLIN" target="CULTURE TECHNIQUE" />
+    <edge source="PENICILLIN" target="BACK-EXTRACTION PROCESS" />
+    <edge source="PENICILLIN" target="PHARMACEUTICAL FIRMS" />
+    <edge source="PENICILLIN" target="WORLD WAR II" />
+    <edge source="PENICILLIN" target="BLOOD INFECTION" />
+    <edge source="PENICILLIN" target="KINETICS OF FERMENTATION" />
+    <edge source="PENICILLIN" target="FLOREY AND CHAIN" />
+    <edge source="PENICILLIN" target="USDA NORTHERN REGIONAL RESEARCH LABORATORY" />
+    <edge source="PENICILLIN" target="CORN STEEP LIQUOR&#8211;LACTOSE-BASED MEDIUM" />
+    <edge source="PENICILLIN" target="LIFE SCIENTISTS" />
+    <edge source="PENICILLIN" target="PENICILLIN FERMENTATION BROTH" />
+    <edge source="PENICILLIN" target="LOW CONCENTRATION" />
+    <edge source="PENICILLIN" target="PRODUCER STRAINS" />
+    <edge source="PENICILLIN" target="NORTHERN REGIONAL RESEARCH LABORATORY" />
+    <edge source="PENICILLIN" target="PRODUCT RECOVERY" />
+    <edge source="PENICILLIN" target="PURIFICATION TECHNIQUES" />
+    <edge source="PENICILLIN" target="SUBMERGED FERMENTATION" />
+    <edge source="PENICILLIN" target="MOLD PHYSIOLOGY" />
+    <edge source="PENICILLIN" target="METABOLIC PATHWAYS" />
+    <edge source="PENICILLIN" target="PROCESS CONTROL" />
+    <edge source="PENICILLIN" target="REACTOR DESIGN" />
+    <edge source="PENICILLIN" target="PENICILLIN PROCESS" />
+    <edge source="MERCK" target="FERMENTATION PROCESS" />
+    <edge source="MERCK" target="MULTIDISCIPLINARY COLLABORATION" />
+    <edge source="FERMENTATION PROCESS" target="PFIZER" />
+    <edge source="FERMENTATION PROCESS" target="SQUIBB" />
+    <edge source="FERMENTATION PROCESS" target="CHEMICAL SYNTHESIS" />
+    <edge source="FERMENTATION PROCESS" target="PILOT-PLANT" />
+    <edge source="PFIZER" target="SUBMERGED TANK PROCESS" />
+    <edge source="PFIZER" target="SUBMERGED FERMENTATION" />
+    <edge source="A. L. ELDER" target="WAR PRODUCTION BOARD" />
+    <edge source="PENICILLIUM CHRYSOGENUM" target="PENICILLIN FERMENTATION" />
+    <edge source="PENICILLIN FERMENTATION" target="BRAN METHOD" />
+    <edge source="PENICILLIN FERMENTATION" target="BOTTLE PLANT" />
+    <edge source="PENICILLIN FERMENTATION" target="SUBMERGED TANK PROCESS" />
+    <edge source="REACTOR DESIGN" target="ANTIBIOTIC FERMENTERS" />
+    <edge source="ANTIBIOTIC FERMENTERS" target="MICROORGANISMS" />
+    <edge source="PENICILLIN PROCESS" target="RECOMBINANT DNA" />
+    <edge source="RECOMBINANT DNA" target="GENETICALLY ENGINEERED ORGANISM" />
+  </graph>
+</graphml>
