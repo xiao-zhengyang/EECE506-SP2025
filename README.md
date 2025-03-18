@@ -2,8 +2,6 @@
 
 GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads text and organizes it into knowledge graphs for better AI information retrieval.
 
-## Installation and Setup
-
 1. **Install Ollama.**  
    [https://ollama.com/](https://ollama.com/)
 
