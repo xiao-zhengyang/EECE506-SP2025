@@ -26,7 +26,7 @@ GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads t
    pip install graphrag
    ```
 
-6. **Download Qwen2.5-3b-INT4 model (or a larger model if your hardware supports it).**  
+6. **Download Qwen2.5-7b-INT4 model (or a larger model if your hardware supports it).**  
    ```bash
    ollama pull qwen2.5:7b
    ```
@@ -37,7 +37,7 @@ GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads t
    cd (Path to your GraphRAG folder)
    ```
 
-8. **Create an 4k context length qwen2.5:3b LLM.**  
+8. **Create an 4k context length qwen2.5:7b LLM.**  
    Run this in the terminal. This step is necessary to avoid truncations of LLM output. This command generates a settings file in the terminal's current directory.
    ```bash
    ollama show qwen2.5:7b --modelfile > settings.txt
