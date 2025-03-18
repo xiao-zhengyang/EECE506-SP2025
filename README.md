@@ -1,4 +1,4 @@
-# GraphRAG
+# GraphRAG tutorial
 
 GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads text and organizes it into knowledge graphs for better AI information retrieval.
 
