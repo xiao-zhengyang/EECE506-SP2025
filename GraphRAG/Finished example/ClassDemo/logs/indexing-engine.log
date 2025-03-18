@@ -1,0 +1,1418 @@
+14:40:15,215 graphrag.cli.index INFO Logging enabled at C:\Users\shawn\OneDrive - Washington University in St. Louis\GraphRAG\ClassDemo\logs\indexing-engine.log
+14:40:15,216 graphrag.cli.index INFO Starting pipeline run for: 20250318-144015, dry_run=False
+14:40:15,217 graphrag.cli.index INFO Using default configuration: {
+    "llm": {
+        "api_key": "==== REDACTED ====",
+        "type": "openai_chat",
+        "encoding_model": "cl100k_base",
+        "model": "qwen2.5:7b_4k",
+        "max_tokens": 4096,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "n": 1,
+        "frequency_penalty": 0.0,
+        "presence_penalty": 0.0,
+        "request_timeout": 10000.0,
+        "api_base": "http://localhost:11434/v1",
+        "api_version": null,
+        "proxy": null,
+        "audience": null,
+        "deployment_name": null,
+        "model_supports_json": true,
+        "tokens_per_minute": 50000,
+        "requests_per_minute": 1000,
+        "max_retries": 10,
+        "max_retry_wait": 10.0,
+        "sleep_on_rate_limit_recommendation": true,
+        "concurrent_requests": 25,
+        "responses": null
+    },
+    "parallelization": {
+        "stagger": 0.3,
+        "num_threads": 50
+    },
+    "async_mode": "threaded",
+    "root_dir": "C:\\Users\\shawn\\OneDrive - Washington University in St. Louis\\GraphRAG\\ClassDemo",
+    "reporting": {
+        "type": "file",
+        "base_dir": "C:\\Users\\shawn\\OneDrive - Washington University in St. Louis\\GraphRAG\\ClassDemo\\logs",
+        "storage_account_blob_url": null
+    },
+    "storage": {
+        "type": "file",
+        "base_dir": "C:\\Users\\shawn\\OneDrive - Washington University in St. Louis\\GraphRAG\\ClassDemo\\output",
+        "storage_account_blob_url": null,
+        "cosmosdb_account_url": null
+    },
+    "update_index_storage": null,
+    "cache": {
+        "type": "file",
+        "base_dir": "cache",
+        "storage_account_blob_url": null,
+        "cosmosdb_account_url": null
+    },
+    "input": {
+        "type": "file",
+        "file_type": "text",
+        "base_dir": "input",
+        "storage_account_blob_url": null,
+        "encoding": "utf-8",
+        "file_pattern": ".*\\.txt$",
+        "file_filter": null,
+        "source_column": null,
+        "timestamp_column": null,
+        "timestamp_format": null,
+        "text_column": "text",
+        "title_column": null,
+        "document_attribute_columns": []
+    },
+    "embed_graph": {
+        "enabled": true,
+        "dimensions": 1536,
+        "num_walks": 10,
+        "walk_length": 40,
+        "window_size": 2,
+        "iterations": 3,
+        "random_seed": 597832,
+        "use_lcc": true
+    },
+    "embeddings": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_embedding",
+            "encoding_model": "cl100k_base",
+            "model": "qwen2.5:7b_4k",
+            "max_tokens": 4000,
+            "temperature": 0,
+            "top_p": 1,
+            "n": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "request_timeout": 180.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "audience": null,
+            "deployment_name": null,
+            "model_supports_json": null,
+            "tokens_per_minute": 50000,
+            "requests_per_minute": 1000,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25,
+            "responses": null
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "batch_size": 16,
+        "batch_max_tokens": 8191,
+        "target": "required",
+        "skip": [],
+        "vector_store": {
+            "type": "lancedb",
+            "db_uri": "C:\\Users\\shawn\\OneDrive - Washington University in St. Louis\\GraphRAG\\ClassDemo\\output\\lancedb",
+            "container_name": "==== REDACTED ====",
+            "overwrite": true
+        },
+        "strategy": null
+    },
+    "chunks": {
+        "size": 300,
+        "overlap": 50,
+        "group_by_columns": [
+            "id"
+        ],
+        "strategy": "tokens",
+        "encoding_model": "cl100k_base"
+    },
+    "snapshots": {
+        "embeddings": false,
+        "graphml": true,
+        "transient": false
+    },
+    "entity_extraction": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_chat",
+            "encoding_model": "cl100k_base",
+            "model": "qwen2.5:7b_4k",
+            "max_tokens": 4096,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "n": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "request_timeout": 10000.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "audience": null,
+            "deployment_name": null,
+            "model_supports_json": true,
+            "tokens_per_minute": 50000,
+            "requests_per_minute": 1000,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25,
+            "responses": null
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "prompt": "prompts/entity_extraction.txt",
+        "entity_types": [
+            "organization",
+            "person",
+            "geo",
+            "event"
+        ],
+        "max_gleanings": 1,
+        "strategy": null,
+        "encoding_model": "cl100k_base"
+    },
+    "summarize_descriptions": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_chat",
+            "encoding_model": "cl100k_base",
+            "model": "qwen2.5:7b_4k",
+            "max_tokens": 4096,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "n": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "request_timeout": 10000.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "audience": null,
+            "deployment_name": null,
+            "model_supports_json": true,
+            "tokens_per_minute": 50000,
+            "requests_per_minute": 1000,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25,
+            "responses": null
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "prompt": "prompts/summarize_descriptions.txt",
+        "max_length": 500,
+        "strategy": null
+    },
+    "community_reports": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_chat",
+            "encoding_model": "cl100k_base",
+            "model": "qwen2.5:7b_4k",
+            "max_tokens": 4096,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "n": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "request_timeout": 10000.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "audience": null,
+            "deployment_name": null,
+            "model_supports_json": true,
+            "tokens_per_minute": 50000,
+            "requests_per_minute": 1000,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25,
+            "responses": null
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "prompt": "prompts/community_report.txt",
+        "max_length": 2000,
+        "max_input_length": 8000,
+        "strategy": null
+    },
+    "claim_extraction": {
+        "llm": {
+            "api_key": "==== REDACTED ====",
+            "type": "openai_chat",
+            "encoding_model": "cl100k_base",
+            "model": "qwen2.5:7b_4k",
+            "max_tokens": 4096,
+            "temperature": 0.0,
+            "top_p": 1.0,
+            "n": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "request_timeout": 10000.0,
+            "api_base": "http://localhost:11434/v1",
+            "api_version": null,
+            "proxy": null,
+            "audience": null,
+            "deployment_name": null,
+            "model_supports_json": true,
+            "tokens_per_minute": 50000,
+            "requests_per_minute": 1000,
+            "max_retries": 10,
+            "max_retry_wait": 10.0,
+            "sleep_on_rate_limit_recommendation": true,
+            "concurrent_requests": 25,
+            "responses": null
+        },
+        "parallelization": {
+            "stagger": 0.3,
+            "num_threads": 50
+        },
+        "async_mode": "threaded",
+        "enabled": false,
+        "prompt": "prompts/claim_extraction.txt",
+        "description": "Any claims or facts that could be relevant to information discovery.",
+        "max_gleanings": 1,
+        "strategy": null,
+        "encoding_model": "cl100k_base"
+    },
+    "cluster_graph": {
+        "max_cluster_size": 10,
+        "use_lcc": true,
+        "seed": 3735928559
+    },
+    "umap": {
+        "enabled": true
+    },
+    "local_search": {
+        "prompt": "prompts/local_search_system_prompt.txt",
+        "text_unit_prop": 0.5,
+        "community_prop": 0.15,
+        "conversation_history_max_turns": 5,
+        "top_k_entities": 10,
+        "top_k_relationships": 10,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "n": 1,
+        "max_tokens": 12000,
+        "llm_max_tokens": 2000
+    },
+    "global_search": {
+        "map_prompt": "prompts/global_search_map_system_prompt.txt",
+        "reduce_prompt": "prompts/global_search_reduce_system_prompt.txt",
+        "knowledge_prompt": "prompts/global_search_knowledge_system_prompt.txt",
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "n": 1,
+        "max_tokens": 12000,
+        "data_max_tokens": 12000,
+        "map_max_tokens": 1000,
+        "reduce_max_tokens": 2000,
+        "concurrency": 32,
+        "dynamic_search_llm": "gpt-4o-mini",
+        "dynamic_search_threshold": 1,
+        "dynamic_search_keep_parent": false,
+        "dynamic_search_num_repeats": 1,
+        "dynamic_search_use_summary": false,
+        "dynamic_search_concurrent_coroutines": 16,
+        "dynamic_search_max_level": 2
+    },
+    "drift_search": {
+        "prompt": "prompts/drift_search_system_prompt.txt",
+        "reduce_prompt": null,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "n": 3,
+        "max_tokens": 12000,
+        "data_max_tokens": 12000,
+        "reduce_max_tokens": 2000,
+        "reduce_temperature": 0.0,
+        "concurrency": 32,
+        "drift_k_followups": 20,
+        "primer_folds": 5,
+        "primer_llm_max_tokens": 12000,
+        "n_depth": 3,
+        "local_search_text_unit_prop": 0.9,
+        "local_search_community_prop": 0.1,
+        "local_search_top_k_mapped_entities": 10,
+        "local_search_top_k_relationships": 10,
+        "local_search_max_data_tokens": 12000,
+        "local_search_temperature": 0.0,
+        "local_search_top_p": 1.0,
+        "local_search_n": 1,
+        "local_search_llm_max_gen_tokens": 2000
+    },
+    "basic_search": {
+        "prompt": "prompts/basic_search_system_prompt.txt",
+        "text_unit_prop": 0.5,
+        "conversation_history_max_turns": 5,
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "n": 1,
+        "max_tokens": 12000,
+        "llm_max_tokens": 2000
+    },
+    "encoding_model": "cl100k_base",
+    "skip_workflows": []
+}
+14:40:15,218 graphrag.storage.file_pipeline_storage INFO Creating file storage at C:\Users\shawn\OneDrive - Washington University in St. Louis\GraphRAG\ClassDemo\output
+14:40:15,218 graphrag.index.input.factory INFO loading input from root_dir=input
+14:40:15,218 graphrag.index.input.factory INFO using file storage for input
+14:40:15,219 graphrag.storage.file_pipeline_storage INFO search C:\Users\shawn\OneDrive - Washington University in St. Louis\GraphRAG\ClassDemo\input for files matching .*\.txt$
+14:40:15,219 graphrag.index.input.text INFO found text files from input, found [('Textbook 1.1-1.3.txt', {})]
+14:40:15,226 graphrag.index.input.text INFO Found 1 files, loading 1
+14:40:15,228 graphrag.index.run.run_workflows INFO Final # of rows loaded: 1
+14:40:15,235 graphrag.utils.storage INFO reading table from storage: input.parquet
+14:40:15,906 graphrag.utils.storage INFO reading table from storage: input.parquet
+14:40:15,908 graphrag.utils.storage INFO reading table from storage: create_base_text_units.parquet
+14:40:15,992 graphrag.utils.storage INFO reading table from storage: create_base_text_units.parquet
+14:40:28,935 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:29,811 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:31,348 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:33,905 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:36,245 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:40,142 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:42,33 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:48,883 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:49,759 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:52,817 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:40:55,931 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:41:04,237 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:41:05,208 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:41:39,409 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:42:26,74 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:42:31,226 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:42:41,581 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:43:05,253 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:43:20,289 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:43:26,461 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:43:29,353 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:43:39,399 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:43:57,778 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:00,215 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:07,240 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:08,678 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:11,94 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:11,129 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:11,755 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:12,75 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:12,396 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:13,409 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:13,776 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:14,74 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:14,447 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:15,459 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:16,45 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:16,547 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:16,633 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:17,332 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:17,483 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:19,42 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:19,132 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:19,169 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:19,492 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:20,428 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:20,487 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:20,527 graphrag.utils.storage INFO reading table from storage: base_relationship_edges.parquet
+14:44:26,730 graphrag.utils.storage INFO reading table from storage: base_entity_nodes.parquet
+14:44:26,950 graphrag.utils.storage INFO reading table from storage: base_relationship_edges.parquet
+14:44:27,148 graphrag.utils.storage INFO reading table from storage: base_entity_nodes.parquet
+14:44:27,151 graphrag.utils.storage INFO reading table from storage: base_relationship_edges.parquet
+14:44:27,153 graphrag.utils.storage INFO reading table from storage: base_communities.parquet
+14:44:27,258 root INFO Starting preprocessing of transition probabilities on graph with 170 nodes and 194 edges
+14:44:27,264 root INFO Starting at time 1742327067.2644005
+14:44:27,264 root INFO Beginning preprocessing of transition probabilities for 170 vertices
+14:44:27,264 root INFO Completed 1 / 170 vertices
+14:44:27,265 root INFO Completed 18 / 170 vertices
+14:44:27,265 root INFO Completed 35 / 170 vertices
+14:44:27,265 root INFO Completed 52 / 170 vertices
+14:44:27,265 root INFO Completed 69 / 170 vertices
+14:44:27,265 root INFO Completed 86 / 170 vertices
+14:44:27,265 root INFO Completed 103 / 170 vertices
+14:44:27,265 root INFO Completed 120 / 170 vertices
+14:44:27,265 root INFO Completed 137 / 170 vertices
+14:44:27,265 root INFO Completed 154 / 170 vertices
+14:44:27,265 root INFO Completed preprocessing of transition probabilities for vertices
+14:44:27,265 root INFO Beginning preprocessing of transition probabilities for 194 edges
+14:44:27,265 root INFO Completed 1 / 194 edges
+14:44:27,265 root INFO Completed 20 / 194 edges
+14:44:27,266 root INFO Completed 39 / 194 edges
+14:44:27,266 root INFO Completed 58 / 194 edges
+14:44:27,267 root INFO Completed 77 / 194 edges
+14:44:27,267 root INFO Completed 96 / 194 edges
+14:44:27,267 root INFO Completed 115 / 194 edges
+14:44:27,268 root INFO Completed 134 / 194 edges
+14:44:27,268 root INFO Completed 153 / 194 edges
+14:44:27,268 root INFO Completed 172 / 194 edges
+14:44:27,268 root INFO Completed 191 / 194 edges
+14:44:27,268 root INFO Completed preprocessing of transition probabilities for edges
+14:44:27,268 root INFO Simulating walks on graph at time 1742327067.2684016
+14:44:27,269 root INFO Walk iteration: 1/10
+14:44:27,274 root INFO Walk iteration: 2/10
+14:44:27,277 root INFO Walk iteration: 3/10
+14:44:27,281 root INFO Walk iteration: 4/10
+14:44:27,285 root INFO Walk iteration: 5/10
+14:44:27,288 root INFO Walk iteration: 6/10
+14:44:27,293 root INFO Walk iteration: 7/10
+14:44:27,298 root INFO Walk iteration: 8/10
+14:44:27,301 root INFO Walk iteration: 9/10
+14:44:27,305 root INFO Walk iteration: 10/10
+14:44:27,309 root INFO Learning embeddings at time 1742327067.3094003
+14:44:27,310 gensim.models.word2vec INFO collecting all words and their counts
+14:44:27,310 gensim.models.word2vec INFO PROGRESS: at sentence #0, processed 0 words, keeping 0 word types
+14:44:27,311 gensim.models.word2vec INFO collected 170 word types from a corpus of 23920 raw words and 1700 sentences
+14:44:27,311 gensim.models.word2vec INFO Creating a fresh vocabulary
+14:44:27,311 gensim.utils INFO Word2Vec lifecycle event {'msg': 'effective_min_count=0 retains 170 unique words (100.00% of original 170, drops 0)', 'datetime': '2025-03-18T14:44:27.311401', 'gensim': '4.3.3', 'python': '3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.26100-SP0', 'event': 'prepare_vocab'}
+14:44:27,312 gensim.utils INFO Word2Vec lifecycle event {'msg': 'effective_min_count=0 leaves 23920 word corpus (100.00% of original 23920, drops 0)', 'datetime': '2025-03-18T14:44:27.312401', 'gensim': '4.3.3', 'python': '3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.26100-SP0', 'event': 'prepare_vocab'}
+14:44:27,312 gensim.models.word2vec INFO deleting the raw counts dictionary of 170 items
+14:44:27,313 gensim.models.word2vec INFO sample=0.001 downsamples 112 most-common words
+14:44:27,313 gensim.utils INFO Word2Vec lifecycle event {'msg': 'downsampling leaves estimated 12193.904466874521 word corpus (51.0%% of prior 23920)', 'datetime': '2025-03-18T14:44:27.313402', 'gensim': '4.3.3', 'python': '3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.26100-SP0', 'event': 'prepare_vocab'}
+14:44:27,313 gensim.models.word2vec INFO estimated required memory for 170 words and 1536 dimensions: 2173960 bytes
+14:44:27,313 gensim.models.word2vec INFO resetting layer weights
+14:44:27,315 gensim.utils INFO Word2Vec lifecycle event {'update': False, 'trim_rule': 'None', 'datetime': '2025-03-18T14:44:27.315401', 'gensim': '4.3.3', 'python': '3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.26100-SP0', 'event': 'build_vocab'}
+14:44:27,315 gensim.utils INFO Word2Vec lifecycle event {'msg': 'training model with 8 workers on 170 vocabulary and 1536 features, using sg=1 hs=0 sample=0.001 negative=5 window=2 shrink_windows=True', 'datetime': '2025-03-18T14:44:27.315401', 'gensim': '4.3.3', 'python': '3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.26100-SP0', 'event': 'train'}
+14:44:27,350 gensim.models.word2vec INFO EPOCH 0: training on 23920 raw words (12177 effective words) took 0.0s, 387084 effective words/s
+14:44:27,385 gensim.models.word2vec INFO EPOCH 1: training on 23920 raw words (12190 effective words) took 0.0s, 384327 effective words/s
+14:44:27,423 gensim.models.word2vec INFO EPOCH 2: training on 23920 raw words (12283 effective words) took 0.0s, 359673 effective words/s
+14:44:27,423 gensim.utils INFO Word2Vec lifecycle event {'msg': 'training on 71760 raw words (36650 effective words) took 0.1s, 339013 effective words/s', 'datetime': '2025-03-18T14:44:27.423059', 'gensim': '4.3.3', 'python': '3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.26100-SP0', 'event': 'train'}
+14:44:27,423 gensim.utils INFO Word2Vec lifecycle event {'params': 'Word2Vec<vocab=170, vector_size=1536, alpha=0.025>', 'datetime': '2025-03-18T14:44:27.423059', 'gensim': '4.3.3', 'python': '3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.26100-SP0', 'event': 'created'}
+14:44:27,423 root INFO Completed. Ending time is 1742327067.4230595 Elapsed time is -0.1586589813232422
+14:44:33,941 graphrag.utils.storage INFO reading table from storage: base_entity_nodes.parquet
+14:44:33,943 graphrag.utils.storage INFO reading table from storage: base_relationship_edges.parquet
+14:44:33,963 graphrag.utils.storage INFO reading table from storage: base_communities.parquet
+14:44:34,162 graphrag.utils.storage INFO reading table from storage: create_base_text_units.parquet
+14:44:34,165 graphrag.utils.storage INFO reading table from storage: create_final_entities.parquet
+14:44:34,172 graphrag.utils.storage INFO reading table from storage: create_final_relationships.parquet
+14:44:34,578 graphrag.utils.storage INFO reading table from storage: create_final_nodes.parquet
+14:44:34,598 graphrag.utils.storage INFO reading table from storage: create_final_relationships.parquet
+14:44:34,601 graphrag.utils.storage INFO reading table from storage: create_final_entities.parquet
+14:44:34,602 graphrag.utils.storage INFO reading table from storage: create_final_communities.parquet
+14:44:34,705 graphrag.index.operations.summarize_communities.prepare_community_reports INFO Number of nodes at level=1 => 115
+14:44:34,815 graphrag.index.operations.summarize_communities.prepare_community_reports INFO Number of nodes at level=0 => 170
+14:44:49,137 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:50,546 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:44:58,508 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:02,649 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:06,759 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:13,875 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:17,550 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:20,527 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:23,117 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:30,998 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:32,424 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:39,405 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:46,19 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:45:55,333 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:46:08,319 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:46:12,502 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:46:32,204 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:46:46,922 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:46:46,935 graphrag.index.operations.summarize_communities.community_reports_extractor.community_reports_extractor ERROR error generating community report
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 192, in _parse_json_string
+    return json.loads(value) if value else None
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 160 column 28 (char 8834)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 162, in invoke_json
+    return await self.try_receive_json(delegate, prompt, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 180, in try_receive_json
+    raw_json = self._parse_json_string(json_string)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 195, in _parse_json_string
+    raise FailedToGenerateValidJsonError(msg) from err
+fnllm.services.errors.FailedToGenerateValidJsonError: JSON response is not a valid JSON, response={
+    "title": "Penicillin Production Community",
+    "summary": "The community revolves around the discovery and production of penicillin from Penicillium notatum. Key elements include the identification, isolation, and characterization of antibacterial substances by Alexander Fleming, leading to the development of antibiotics like penicillin.",
+    "description": "This community highlights the collaborative efforts between microorganisms (Penicillium notatum) and scientists in identifying and characterizing antibacterial agents, ultimately resulting in the discovery of penicillin. The process involves multiple steps such as identification, isolation, and characterization, which are crucial for understanding and developing new antibiotics.",
+    "degree": 36,
+    "relationships": [
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "STAPHYLOCOCCUS AUREUS",
+            "description": "Penicillium notatum produced an antibacterial agent that inhibited the growth of Staphylococcus aureus, leading to the discovery of penicillin."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "MOLD",
+            "description": "Penicillium notatum is a specific mold species known for its antibacterial properties."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL AGENT",
+            "description": "Penicillium notatum produces an antibacterial agent that can inhibit bacterial growth."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "BACTERIAL CULTURE PLATE",
+            "description": "Penicillium notatum was discovered through the observation of its effect on a bacterial culture plate."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "CRUDE EXTRACTION METHODS",
+            "description": "Fleming used crude extraction methods to obtain the substance secreted by Penicillium notatum."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIMICROBIAL PROPERTIES",
+            "description": "Penicillium notatum possesses antimicrobial properties that were discovered by Alexander Fleming."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBIOTICS",
+            "description": "Penicillium notatum's discovery led to the development of antibiotics like penicillin."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "FUNGUS",
+            "description": "Penicillium notatum is a specific type of fungus known for its antimicrobial properties."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL SUBSTANCE",
+            "description": "Penicillium notatum produces an antibacterial substance that was discovered and named penicillin."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "CRUDE EXTRACT",
+            "description": "Fleming isolated a crude extract from Penicillium notatum that contained the antibacterial substance penicillin."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ACTIVE COMPOUND",
+            "description": "Penicillium notatum produces an active compound that has antimicrobial properties."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIMICROBIAL SUBSTANCE",
+            "description": "Penicillium notatum produces an antimicrobial substance that was discovered and named penicillin."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY PROCESS",
+            "description": "Alexander Fleming's discovery of penicillin involved the identification, isolation, and characterization of an antibacterial substance produced by Penicillium notatum."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL ACTIVITY",
+            "description": "Penicillium notatum exhibits antibacterial activity through the secretion of an antibacterial agent."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "BACTERIAL GROWTH INHIBITION",
+            "description": "Penicillium notatum inhibits bacterial growth through the production of an antibacterial agent."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIMICROBIAL ACTIVITY",
+            "description": "Penicillium notatum exhibits antimicrobial activity through the secretion of an antibacterial agent."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY OF ANTIMICROBIAL SUBSTANCE",
+            "description": "Alexander Fleming's discovery involved the identification and characterization of an antimicrobial substance produced by Penicillium notatum."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL AGENT PRODUCTION",
+            "description": "Penicillium notatum produces an antibacterial agent through the secretion process."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS",
+            "description": "Alexander Fleming's process involved the identification, isolation, and characterization of an antimicrobial substance produced by Penicillium notatum."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL SUBSTANCE ISOLATION",
+            "description": "Fleming isolated an antibacterial substance from Penicillium notatum through the use of crude extraction methods."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS STEPS",
+            "description": "Alexander Fleming's discovery process included the identification, isolation, and characterization of an antimicrobial substance produced by Penicillium notatum."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL AGENT SECRETED",
+            "description": "Penicillium notatum secretes an antibacterial agent that was discovered and named penicillin."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION",
+            "description": "Alexander Fleming's identification involved recognizing an antibacterial substance produced by Penicillium notatum."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL AGENT CHARACTERIZATION",
+            "description": "Fleming characterized an antibacterial agent produced by Penicillium notatum through various experiments."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS ISOLATION",
+            "description": "Fleming isolated an antibacterial substance from Penicillium notatum through crude extraction methods."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL AGENT SECRETED BY FUNGUS",
+            "description": "Penicillium notatum secretes an antibacterial agent as a fungal species."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS CHARACTERIZATION",
+            "description": "Fleming characterized an antibacterial substance produced by Penicillium notatum through various experiments."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL AGENT SECRETED BY FUNGAL SPECIES",
+            "description": "Penicillium notatum secretes an antibacterial agent as a fungal species."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION AND ISOLATION",
+            "description": "Alexander Fleming's identification and isolation involved recognizing an antibacterial substance produced by Penicillium notatum through crude extraction methods."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "ANTIBACTERIAL AGENT SECRETED BY FUNGAL SPECIES CHARACTERIZATION",
+            "description": "Fleming characterized an antibacterial agent produced by Penicillium notatum through various experiments as a fungal species."
+        },
+        {
+            "source": "PENICILLIUM NOTATUM",
+            "target": "DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION, ISOLATION, AND CHARACTERIZATION",
+            "description": "Alexander Fleming's discovery.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 112, in __call__
+    return await self._invoke(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 128, in _invoke
+    return await self._decorated_target(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 70, in invoke
+    return await this.invoke_json(delegate, prompt, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 166, in invoke_json
+    raise FailedToGenerateValidJsonError from error
+fnllm.services.errors.FailedToGenerateValidJsonError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\operations\summarize_communities\community_reports_extractor\community_reports_extractor.py", line 80, in __call__
+    response = await self._llm(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\openai\llm\chat.py", line 83, in __call__
+    return await self._text_chat_llm(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\openai\llm\features\tools_parsing.py", line 120, in __call__
+    return await self._delegate(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 116, in __call__
+    await self._events.on_error(
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\llm\load_llm.py", line 52, in on_error
+    self._on_error(error, traceback, arguments)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\llm\load_llm.py", line 169, in on_error
+    callbacks.error("Error Invoking LLM", error, stack, details)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\callbacks\workflow_callbacks_manager.py", line 51, in error
+    callback.error(message, cause, stack, details)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\callbacks\file_workflow_callbacks.py", line 37, in error
+    json.dumps(
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ModelMetaclass is not JSON serializable
+14:46:46,944 graphrag.callbacks.file_workflow_callbacks INFO Community Report Extraction Error details=None
+14:46:46,944 graphrag.index.operations.summarize_communities.strategies WARNING No report found for community: 8
+14:46:59,598 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:47:24,310 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:47:24,312 graphrag.index.operations.summarize_communities.community_reports_extractor.community_reports_extractor ERROR error generating community report
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 192, in _parse_json_string
+    return json.loads(value) if value else None
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 164 column 23 (char 9959)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 162, in invoke_json
+    return await self.try_receive_json(delegate, prompt, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 180, in try_receive_json
+    raw_json = self._parse_json_string(json_string)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 195, in _parse_json_string
+    raise FailedToGenerateValidJsonError(msg) from err
+fnllm.services.errors.FailedToGenerateValidJsonError: JSON response is not a valid JSON, response={
+    "title": "Bioprocess Engineering and Modern Antibiotics",
+    "summary": "This report examines the community centered around Bioprocess Engineers who integrate knowledge from various scientific disciplines such as Biochemistry, Physics, Mathematical Sciences, Statistics, and Experimental Tools. The key entities are interconnected through their roles in developing bioprocesses for industries like pharmaceuticals, biofuels, and biopharmaceuticals. The advent of modern antibiotics has significantly influenced the development of bioprocess engineering practices.",
+    "rating": 8.5,
+    "rating_explanation": "The report is highly relevant as it highlights the interdisciplinary nature of bioprocess engineering and its impact on various industries, making it a crucial field in modern biotechnology.",
+    "relationships": [
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "CHEMICAL ENGINEERING",
+            "description": "Chemical engineering provides a foundation for bioprocess engineers who apply these principles in processes involving biological catalysts."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "BIOCHEMISTRY",
+            "description": "The Biochemistry knowledge is crucial for BIOPROCESS ENGINEERS as it provides them with a comprehensive understanding of biological systems, enabling them to effectively optimize and manage biochemical reactions within bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "PHYSICS",
+            "description": "Bioprocess engineers can benefit from knowledge in physics for understanding and optimizing physical processes in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "MATHEMATICAL SCIENCES",
+            "description": "Bioprocess engineers can benefit from knowledge in mathematical sciences for developing models and algorithms to optimize bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "STATISTICS",
+            "description": "Bioprocess engineers can benefit from knowledge in statistics for interpreting complex experimental data and optimizing processes."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "EXPERIMENTAL TOOLS",
+            "description": "Bioprocess engineers can benefit from advancements in experimental tools for improving their processes and monitoring bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "QUALITATIVE RESULTS",
+            "description": "Bioprocess engineers can benefit from understanding qualitative data, as it is often used in biological research and experimental design."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "LABORATORY TECHNIQUES",
+            "description": "Bioprocess engineers can benefit from knowledge of laboratory techniques, as they are crucial for experimental design and data interpretation."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "COMPLEX EXPERIMENTAL DATA",
+            "description": "Bioprocess engineers can benefit from understanding complex experimental data, as it is essential for interpreting results and optimizing processes."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "MATHEMATICAL THEORIES",
+            "description": "Bioprocess engineers can benefit from understanding mathematical theories, as they are increasingly important for modeling and analyzing bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "QUANTITATIVE METHODS",
+            "description": "Bioprocess engineers can benefit from understanding quantitative methods, as they are increasingly important for modeling and analyzing bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "ENGINEERING THEORIES",
+            "description": "Bioprocess engineers can benefit from understanding engineering theories, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "PHYSICAL SCIENCES",
+            "description": "Bioprocess engineers can benefit from knowledge in physical sciences for understanding and optimizing physical processes in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "EXPERIMENTAL TOOLS DEVELOPMENT",
+            "description": "Bioprocess engineers can benefit from advancements in experimental tools, as they are essential for improving their processes and monitoring bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "CONTROL ALGORITHMS",
+            "description": "Bioprocess engineers can benefit from understanding control algorithms, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "MANUFACTURING STRATEGIES",
+            "description": "Bioprocess engineers can benefit from understanding manufacturing strategies, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "SENSOR DEVELOPMENT",
+            "description": "Bioprocess engineers can benefit from advancements in sensor development, as they are essential for improving their processes and monitoring bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "MULTIDISCIPLINARY PERSPECTIVES",
+            "description": "Bioprocess engineers can benefit from integrating knowledge from various scientific disciplines, as it provides a broader understanding of bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "DESIGNABLE COMPONENTS",
+            "description": "Bioprocess engineers can benefit from the ability to design cells as components of bioprocesses, providing a new level of control and optimization."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "LIVING CELLS OR COMPONENTS THEREOF",
+            "description": "Bioprocess engineers can benefit from understanding living cells and their components, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "MACROMOLECULES",
+            "description": "Bioprocess engineers can benefit from understanding macromolecules, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "CHEMICAL PROCESSES",
+            "description": "Bioprocess engineers can benefit from understanding chemical processes, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "BIOLOGICAL REACTIONS",
+            "description": "Bioprocess engineers can benefit from understanding biological reactions, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "PHYSICAL PROCESSES",
+            "description": "Bioprocess engineers can benefit from understanding physical processes, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "MODELING AND ANALYSIS",
+            "description": "Bioprocess engineers can benefit from understanding modeling and analysis, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "OPTIMIZATION",
+            "description": "Bioprocess engineers can benefit from understanding optimization techniques, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "MONITORING BIOPROCESSES",
+            "description": "Bioprocess engineers can benefit from understanding monitoring techniques, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "EXPERIMENTAL DESIGN",
+            "description": "Bioprocess engineers can benefit from understanding experimental design, as it provides the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "DATA INTERPRETATION",
+            "description": "Bioprocess engineers can benefit from understanding data interpretation, as it provides the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "MODEL DEVELOPMENT",
+            "description": "Bioprocess engineers can benefit from understanding model development, as it provides the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "ALGORITHMS FOR BIOPROCESSES",
+            "description": "Bioprocess engineers can benefit from understanding algorithms, as they provide the basis for developing models and algorithms in bioprocesses."
+        },
+        {
+            "source": "BIOPROCESS ENGINEER",
+            "target": "BIOCHEMICAL REACTIONS.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 112, in __call__
+    return await self._invoke(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 128, in _invoke
+    return await self._decorated_target(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 70, in invoke
+    return await this.invoke_json(delegate, prompt, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 166, in invoke_json
+    raise FailedToGenerateValidJsonError from error
+fnllm.services.errors.FailedToGenerateValidJsonError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\operations\summarize_communities\community_reports_extractor\community_reports_extractor.py", line 80, in __call__
+    response = await self._llm(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\openai\llm\chat.py", line 83, in __call__
+    return await self._text_chat_llm(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\openai\llm\features\tools_parsing.py", line 120, in __call__
+    return await self._delegate(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 116, in __call__
+    await self._events.on_error(
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\llm\load_llm.py", line 52, in on_error
+    self._on_error(error, traceback, arguments)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\llm\load_llm.py", line 169, in on_error
+    callbacks.error("Error Invoking LLM", error, stack, details)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\callbacks\workflow_callbacks_manager.py", line 51, in error
+    callback.error(message, cause, stack, details)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\callbacks\file_workflow_callbacks.py", line 37, in error
+    json.dumps(
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ModelMetaclass is not JSON serializable
+14:47:24,314 graphrag.callbacks.file_workflow_callbacks INFO Community Report Extraction Error details=None
+14:47:24,314 graphrag.index.operations.summarize_communities.strategies WARNING No report found for community: 15
+14:47:40,456 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:47:45,55 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:47:45,627 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:47:58,308 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:48:09,245 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:48:15,984 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:48:20,889 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:48:26,521 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:48:50,999 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:49:01,636 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:49:24,561 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:49:29,685 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:49:29,688 graphrag.index.operations.summarize_communities.community_reports_extractor.community_reports_extractor ERROR error generating community report
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 205, in _read_model_from_json
+    return json_model.model_validate(value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py", line 627, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 5 validation errors for CommunityReportResponse
+title
+  Field required [type=missing, input_value={'summary': {'title': 'Pe...pment of antibiotics."}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+summary
+  Input should be a valid string [type=string_type, input_value={'title': 'Penicillin Dis...opment of antibiotics."}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+findings
+  Field required [type=missing, input_value={'summary': {'title': 'Pe...pment of antibiotics."}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+rating
+  Field required [type=missing, input_value={'summary': {'title': 'Pe...pment of antibiotics."}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+rating_explanation
+  Field required [type=missing, input_value={'summary': {'title': 'Pe...pment of antibiotics."}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 162, in invoke_json
+    return await self.try_receive_json(delegate, prompt, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 181, in try_receive_json
+    model = self._read_model_from_json(raw_json, json_model)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 208, in _read_model_from_json
+    raise FailedToGenerateValidJsonError(msg) from err
+fnllm.services.errors.FailedToGenerateValidJsonError: JSON response does not match the expected model, response={'summary': {'title': 'Penicillin Discovery and Its Significance', 'description': "This network focuses on the discovery of penicillin by Alexander Fleming through his observations of Penicillium notatum's antibacterial properties against Staphylococcus aureus. The relationships highlight key steps in the identification, isolation, and characterization of an antibacterial substance produced by Penicillium notatum that led to the development of antibiotics."}}.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 112, in __call__
+    return await self._invoke(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 128, in _invoke
+    return await self._decorated_target(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 70, in invoke
+    return await this.invoke_json(delegate, prompt, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 166, in invoke_json
+    raise FailedToGenerateValidJsonError from error
+fnllm.services.errors.FailedToGenerateValidJsonError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\operations\summarize_communities\community_reports_extractor\community_reports_extractor.py", line 80, in __call__
+    response = await self._llm(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\openai\llm\chat.py", line 83, in __call__
+    return await self._text_chat_llm(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\openai\llm\features\tools_parsing.py", line 120, in __call__
+    return await self._delegate(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 116, in __call__
+    await self._events.on_error(
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\llm\load_llm.py", line 52, in on_error
+    self._on_error(error, traceback, arguments)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\llm\load_llm.py", line 169, in on_error
+    callbacks.error("Error Invoking LLM", error, stack, details)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\callbacks\workflow_callbacks_manager.py", line 51, in error
+    callback.error(message, cause, stack, details)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\callbacks\file_workflow_callbacks.py", line 37, in error
+    json.dumps(
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ModelMetaclass is not JSON serializable
+14:49:29,690 graphrag.callbacks.file_workflow_callbacks INFO Community Report Extraction Error details=None
+14:49:29,690 graphrag.index.operations.summarize_communities.strategies WARNING No report found for community: 0
+14:49:35,592 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:50:01,141 httpx INFO HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+14:50:01,143 graphrag.index.operations.summarize_communities.community_reports_extractor.community_reports_extractor ERROR error generating community report
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 192, in _parse_json_string
+    return json.loads(value) if value else None
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 166 column 19 (char 9511)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 162, in invoke_json
+    return await self.try_receive_json(delegate, prompt, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 180, in try_receive_json
+    raw_json = self._parse_json_string(json_string)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 195, in _parse_json_string
+    raise FailedToGenerateValidJsonError(msg) from err
+fnllm.services.errors.FailedToGenerateValidJsonError: JSON response is not a valid JSON, response={
+  "response": {
+    "description": "The bioprocess engineer community is a network of professionals who apply knowledge from various scientific disciplines to design, develop, and optimize processes involving biological catalysts. This community benefits significantly from the integration of chemical engineering principles, biochemical engineering expertise, and genetic manipulation techniques. The relationships between these entities highlight how advancements in one field can influence and enhance another, driving innovation in bioprocesses across industries such as pharmaceuticals, biofuels, and biopharmaceuticals.",
+    "relationships": [
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "CHEMICAL ENGINEERING",
+        "description": "Chemical engineering provides a foundation for bioprocess engineers who apply these principles in processes involving biological catalysts."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "BIOCHEMISTRY",
+        "description": "The Biochemistry knowledge is crucial for BIOPROCESS ENGINEERS as it provides them with a comprehensive understanding of biological systems, enabling them to effectively optimize and manage biochemical reactions within bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "PHYSICS",
+        "description": "Bioprocess engineers can benefit from knowledge in physics for understanding and optimizing physical processes in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "MATHEMATICAL SCIENCES",
+        "description": "Bioprocess engineers can benefit from knowledge in mathematical sciences for developing models and algorithms to optimize bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "STATISTICS",
+        "description": "Bioprocess engineers can benefit from knowledge in statistics for interpreting complex experimental data and optimizing processes."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "EXPERIMENTAL TOOLS",
+        "description": "Bioprocess engineers can benefit from advancements in experimental tools for improving their processes and monitoring bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "QUALITATIVE RESULTS",
+        "description": "Bioprocess engineers can benefit from understanding qualitative data, as it is often used in biological research and experimental design."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "LABORATORY TECHNIQUES",
+        "description": "Bioprocess engineers can benefit from knowledge of laboratory techniques, as they are crucial for experimental design and data interpretation."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "COMPLEX EXPERIMENTAL DATA",
+        "description": "Bioprocess engineers can benefit from understanding complex experimental data, as it is essential for interpreting results and optimizing processes."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "MATHEMATICAL THEORIES",
+        "description": "Bioprocess engineers can benefit from understanding mathematical theories, as they are increasingly important for modeling and analyzing bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "QUANTITATIVE METHODS",
+        "description": "Bioprocess engineers can benefit from understanding quantitative methods, as they are increasingly important for modeling and analyzing bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "ENGINEERING THEORIES",
+        "description": "Bioprocess engineers can benefit from understanding engineering theories, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "PHYSICAL SCIENCES",
+        "description": "Bioprocess engineers can benefit from knowledge in physical sciences for understanding and optimizing physical processes in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "EXPERIMENTAL TOOLS DEVELOPMENT",
+        "description": "Bioprocess engineers can benefit from advancements in experimental tools, as they are essential for improving their processes and monitoring bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "CONTROL ALGORITHMS",
+        "description": "Bioprocess engineers can benefit from understanding control algorithms, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "MANUFACTURING STRATEGIES",
+        "description": "Bioprocess engineers can benefit from understanding manufacturing strategies, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "SENSOR DEVELOPMENT",
+        "description": "Bioprocess engineers can benefit from advancements in sensor development, as they are essential for improving their processes and monitoring bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "MULTIDISCIPLINARY PERSPECTIVES",
+        "description": "Bioprocess engineers can benefit from integrating knowledge from various scientific disciplines, as it provides a broader understanding of bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "DESIGNABLE COMPONENTS",
+        "description": "Bioprocess engineers can benefit from the ability to design cells as components of bioprocesses, providing a new level of control and optimization."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "LIVING CELLS OR COMPONENTS THEREOF",
+        "description": "Bioprocess engineers can benefit from understanding living cells and their components, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "MACROMOLECULES",
+        "description": "Bioprocess engineers can benefit from understanding macromolecules, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "CHEMICAL PROCESSES",
+        "description": "Bioprocess engineers can benefit from understanding chemical processes, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "BIOLOGICAL REACTIONS",
+        "description": "Bioprocess engineers can benefit from understanding biological reactions, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "PHYSICAL PROCESSES",
+        "description": "Bioprocess engineers can benefit from understanding physical processes, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "MODELING AND ANALYSIS",
+        "description": "Bioprocess engineers can benefit from understanding modeling and analysis, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "OPTIMIZATION",
+        "description": "Bioprocess engineers can benefit from understanding optimization techniques, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "MONITORING BIOPROCESSES",
+        "description": "Bioprocess engineers can benefit from understanding monitoring techniques, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "EXPERIMENTAL DESIGN",
+        "description": "Bioprocess engineers can benefit from understanding experimental design, as it provides the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "DATA INTERPRETATION",
+        "description": "Bioprocess engineers can benefit from understanding data interpretation, as it provides the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "MODEL DEVELOPMENT",
+        "description": "Bioprocess engineers can benefit from understanding model development, as it provides the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "ALGORITHMS FOR BIOPROCESSES",
+        "description": "Bioprocess engineers can benefit from understanding algorithms, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS ENGINEER",
+        "target": "BIOCHEMICAL REACTIONS",
+        "description": "Bioprocess engineers can benefit from understanding biochemical reactions, as they provide the basis for developing models and algorithms in bioprocesses."
+      },
+      {
+        "source": "BIOPROCESS.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 112, in __call__
+    return await self._invoke(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 128, in _invoke
+    return await self._decorated_target(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 70, in invoke
+    return await this.invoke_json(delegate, prompt, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\services\json.py", line 166, in invoke_json
+    raise FailedToGenerateValidJsonError from error
+fnllm.services.errors.FailedToGenerateValidJsonError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\operations\summarize_communities\community_reports_extractor\community_reports_extractor.py", line 80, in __call__
+    response = await self._llm(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\openai\llm\chat.py", line 83, in __call__
+    return await self._text_chat_llm(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\openai\llm\features\tools_parsing.py", line 120, in __call__
+    return await self._delegate(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\fnllm\base\base.py", line 116, in __call__
+    await self._events.on_error(
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\llm\load_llm.py", line 52, in on_error
+    self._on_error(error, traceback, arguments)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\index\llm\load_llm.py", line 169, in on_error
+    callbacks.error("Error Invoking LLM", error, stack, details)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\callbacks\workflow_callbacks_manager.py", line 51, in error
+    callback.error(message, cause, stack, details)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\site-packages\graphrag\callbacks\file_workflow_callbacks.py", line 37, in error
+    json.dumps(
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 202, in encode
+    chunks = list(chunks)
+             ^^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "C:\Users\shawn\AppData\Local\Programs\Python\Python311\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type ModelMetaclass is not JSON serializable
+14:50:01,145 graphrag.callbacks.file_workflow_callbacks INFO Community Report Extraction Error details=None
+14:50:01,145 graphrag.index.operations.summarize_communities.strategies WARNING No report found for community: 3
+14:50:01,372 graphrag.utils.storage INFO reading table from storage: create_final_documents.parquet
+14:50:01,379 graphrag.utils.storage INFO reading table from storage: create_final_relationships.parquet
+14:50:01,382 graphrag.utils.storage INFO reading table from storage: create_final_text_units.parquet
+14:50:01,389 graphrag.utils.storage INFO reading table from storage: create_final_entities.parquet
+14:50:01,391 graphrag.utils.storage INFO reading table from storage: create_final_community_reports.parquet
+14:50:01,465 graphrag.index.flows.generate_text_embeddings INFO Creating embeddings
+14:50:01,465 graphrag.index.operations.embed_text.embed_text INFO using vector store lancedb with container_name default for embedding text_unit.text: default-text_unit-text
+14:50:01,484 graphrag.index.operations.embed_text.strategies.openai INFO embedding 13 inputs via 13 snippets using 1 batches. max_batch_size=16, max_tokens=8191
+14:50:03,231 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:03,589 graphrag.index.operations.embed_text.embed_text INFO using vector store lancedb with container_name default for embedding community.full_content: default-community-full_content
+14:50:03,596 graphrag.index.operations.embed_text.strategies.openai INFO embedding 18 inputs via 18 snippets using 2 batches. max_batch_size=16, max_tokens=8191
+14:50:06,709 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:06,971 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:07,18 graphrag.index.operations.embed_text.embed_text INFO using vector store lancedb with container_name default for embedding entity.description: default-entity-description
+14:50:07,24 graphrag.index.operations.embed_text.strategies.openai INFO embedding 188 inputs via 188 snippets using 12 batches. max_batch_size=16, max_tokens=8191
+14:50:07,265 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:07,641 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:07,899 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:08,152 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:08,370 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:08,696 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:08,934 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:09,277 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:09,452 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:09,624 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:09,864 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:10,70 httpx INFO HTTP Request: POST http://localhost:11434/v1/embeddings "HTTP/1.1 200 OK"
+14:50:10,572 graphrag.cli.index INFO All workflows completed successfully.

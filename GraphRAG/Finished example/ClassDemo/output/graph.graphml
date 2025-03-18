@@ -1,0 +1,390 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph edgedefault="undirected">
+    <node id="BIOTECHNOLOGY" />
+    <node id="GENETIC MANIPULATION" />
+    <node id="BIOPROCESS ENGINEER" />
+    <node id="BIOENGINEERING" />
+    <node id="AGRICULTURAL ENGINEER" />
+    <node id="ENVIRONMENTAL ENGINEER" />
+    <node id="INDUSTRIAL ENGINEER" />
+    <node id="ELECTRICAL ENGINEER" />
+    <node id="CHEMICAL ENGINEER" />
+    <node id="CELL BIOLOGY" />
+    <node id="GENETIC ALGORITHM" />
+    <node id="MOLECULAR BIOLOGY" />
+    <node id="PHARMACEUTICALS" />
+    <node id="CHEMICALS" />
+    <node id="FOOD" />
+    <node id="DIAGNOSTICS" />
+    <node id="ENGINEERING" />
+    <node id="MULTIDISCIPLINARY" />
+    <node id="GENETIC THERAPY" />
+    <node id="CELL PATHWAYS" />
+    <node id="CELLULAR METABOLISM" />
+    <node id="GENETIC ENGINEERING" />
+    <node id="MOLECULAR BIOCHEMISTRY" />
+    <node id="CELL CULTURE" />
+    <node id="GENETIC TESTING" />
+    <node id="CELLULAR BIOLOGY" />
+    <node id="GENETIC MODIFICATION" />
+    <node id="CELLULAR RESEARCH" />
+    <node id="GENETIC SEQUENCING" />
+    <node id="CELLULAR GENETICS" />
+    <node id="GENETIC ANALYSIS" />
+    <node id="CELLULAR GENOMICS" />
+    <node id="GENETIC EDITING" />
+    <node id="CELLULAR BIOCHEMISTRY" />
+    <node id="CELLULAR IMMUNOLOGY" />
+    <node id="GENETIC SCREENING" />
+    <node id="GENETIC DIAGNOSIS" />
+    <node id="BIOPROCESS ENGINEERING" />
+    <node id="BIOCHEMICAL ENGINEERING" />
+    <node id="CELLS" />
+    <node id="METABOLIC ENGINEERING" />
+    <node id="MULTIDISCIPLINARY COLLABORATION" />
+    <node id="BIOMOLECULAR ENGINEERING" />
+    <node id="MICROORGANISM" />
+    <node id="REACTOR DESIGN" />
+    <node id="PRODUCT RECOVERY" />
+    <node id="PURIFICATION TECHNIQUES" />
+    <node id="CHEMICAL ENGINEERING" />
+    <node id="BIOMEDICAL ENGINEERING" />
+    <node id="MICROBIOLOGY" />
+    <node id="BIOCHEMISTRY" />
+    <node id="PHYSICS" />
+    <node id="MATHEMATICAL SCIENCES" />
+    <node id="STATISTICS" />
+    <node id="EXPERIMENTAL TOOLS" />
+    <node id="QUALITATIVE RESULTS" />
+    <node id="LABORATORY TECHNIQUES" />
+    <node id="COMPLEX EXPERIMENTAL DATA" />
+    <node id="MATHEMATICAL THEORIES" />
+    <node id="QUANTITATIVE METHODS" />
+    <node id="ENGINEERING THEORIES" />
+    <node id="PHYSICAL SCIENCES" />
+    <node id="BIOLOGISTS" />
+    <node id="ENGINEERS" />
+    <node id="EXPERIMENTAL TOOLS DEVELOPMENT" />
+    <node id="CONTROL ALGORITHMS" />
+    <node id="MANUFACTURING STRATEGIES" />
+    <node id="SENSOR DEVELOPMENT" />
+    <node id="MULTIDISCIPLINARY PERSPECTIVES" />
+    <node id="DESIGNABLE COMPONENTS" />
+    <node id="LIVING CELLS OR COMPONENTS THEREOF" />
+    <node id="MACROMOLECULES" />
+    <node id="CHEMICAL PROCESSES" />
+    <node id="BIOLOGICAL REACTIONS" />
+    <node id="PHYSICAL PROCESSES" />
+    <node id="MODELING AND ANALYSIS" />
+    <node id="OPTIMIZATION" />
+    <node id="MONITORING BIOPROCESSES" />
+    <node id="EXPERIMENTAL DESIGN" />
+    <node id="DATA INTERPRETATION" />
+    <node id="MODEL DEVELOPMENT" />
+    <node id="ALGORITHMS FOR BIOPROCESSES" />
+    <node id="BIOCHEMICAL REACTIONS" />
+    <node id="PHYSIOLOGICAL PROCESSES" />
+    <node id="PENICILLIN" />
+    <node id="ENGINEERING PRINCIPLES" />
+    <node id="PENICILLIUM NOTATUM" />
+    <node id="STAPHYLOCOCCUS AUREUS" />
+    <node id="ALEXANDER FLEMING" />
+    <node id="MOLD" />
+    <node id="ANTIBACTERIAL AGENT" />
+    <node id="BACTERIAL CULTURE PLATE" />
+    <node id="CRUDE EXTRACTION METHODS" />
+    <node id="ANTIMICROBIAL PROPERTIES" />
+    <node id="ANTIBIOTICS" />
+    <node id="FUNGUS" />
+    <node id="ANTIBACTERIAL SUBSTANCE" />
+    <node id="CRUDE EXTRACT" />
+    <node id="ACTIVE COMPOUND" />
+    <node id="ANTIMICROBIAL SUBSTANCE" />
+    <node id="DISCOVERY PROCESS" />
+    <node id="ANTIBACTERIAL ACTIVITY" />
+    <node id="BACTERIAL GROWTH INHIBITION" />
+    <node id="ANTIMICROBIAL ACTIVITY" />
+    <node id="DISCOVERY OF ANTIMICROBIAL SUBSTANCE" />
+    <node id="ANTIBACTERIAL AGENT PRODUCTION" />
+    <node id="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS" />
+    <node id="ANTIBACTERIAL SUBSTANCE ISOLATION" />
+    <node id="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS STEPS" />
+    <node id="ANTIBACTERIAL AGENT SECRETED" />
+    <node id="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION" />
+    <node id="ANTIBACTERIAL AGENT CHARACTERIZATION" />
+    <node id="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS ISOLATION" />
+    <node id="ANTIBACTERIAL AGENT SECRETED BY FUNGUS" />
+    <node id="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS CHARACTERIZATION" />
+    <node id="ANTIBACTERIAL AGENT SECRETED BY FUNGAL SPECIES" />
+    <node id="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION AND ISOLATION" />
+    <node id="ANTIBACTERIAL AGENT SECRETED BY FUNGAL SPECIES CHARACTERIZATION" />
+    <node id="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION, ISOLATION, AND CHARACTERIZATION" />
+    <node id="ANTIBACTERIAL AGENT SECRETED BY FUNGAL SPECIES IDENTIFICATION" />
+    <node id="BOILS" />
+    <node id="NUTRIENT SOLUTION" />
+    <node id="STMARY&#8217;S HOSPITAL" />
+    <node id="CORBIS CORPORATION" />
+    <node id="IMAGE" />
+    <node id="DISCOVERY OF PENICILLIN" />
+    <node id="SULFA DRUGS" />
+    <node id="NORMAN HEATLEY" />
+    <node id="BACK-EXTRACTION PROCESS" />
+    <node id="WORLD WAR II" />
+    <node id="CULTURE OF THE MICROORGANISM" />
+    <node id="HOWARD FLOREY" />
+    <node id="ERNST CHAIN" />
+    <node id="FLOREY AND CHAIN" />
+    <node id="MERCK" />
+    <node id="PFIZER" />
+    <node id="SQUIBB" />
+    <node id="USDA NORTHERN REGIONAL RESEARCH LABORATORY" />
+    <node id="FERMENTATION PROCESS" />
+    <node id="PENICILLIN FERMENTATION" />
+    <node id="CHEMICAL SYNTHESIS" />
+    <node id="UNPROVEN APPROACH" />
+    <node id="PHARMACEUTICAL PRODUCTION" />
+    <node id="CLINICAL SUCCESS" />
+    <node id="LOW CONCENTRATION IN BROTH" />
+    <node id="WAR PRODUCTION BOARD" />
+    <node id="A. L. ELDER" />
+    <node id="LOW TITER PRODUCTION" />
+    <node id="LARGE REACTORS" />
+    <node id="LOW RATE OF PRODUCTION" />
+    <node id="STABLE REACTORS" />
+    <node id="NORTHERN REGIONAL RESEARCH LABORATORY" />
+    <node id="CORN STEEP LIQUOR&#8211;LACTOSE-BASED MEDIUM" />
+    <node id="PENICILLIUM CHRYSOGENUM" />
+    <node id="BRAN METHOD" />
+    <node id="SURFACE METHOD" />
+    <node id="BOTTLE PLANTS" />
+    <node id="SUBMERGED TANK PROCESS" />
+    <node id="MECHANICAL SEAL" />
+    <node id="MICROORGANISMS" />
+    <node id="SUBMERGED FERMENTATION" />
+    <node id="PENICILLIN RECOVERY" />
+    <node id="PENICILLIN STRAINS" />
+    <node id="ANTIBIOTIC FERMENTATION" />
+    <node id="PHARMACEUTICAL_PRODUCTION" />
+    <node id="LARGE-SCALE FERMENTERS" />
+    <node id="CHEMICAL_TRANSFORMATIONS" />
+    <node id="PENICILLIN FERMENTATION PROCESS" />
+    <node id="SUBMERGED_FERMENTATION" />
+    <node id="BIOMEDICAL_ENGINEERING" />
+    <node id="BIOSYSTEMS" />
+    <node id="BIOPROCESSING" />
+    <node id="LARGE TANKS" />
+    <node id="GENETIC_MANIPULATION" />
+    <node id="CELL_BIOLOGY" />
+    <node id="BIOMOLECULAR_ENGINEERING" />
+    <node id="MICROBIOLOGIST" />
+    <node id="METABOLIC PATHWAYS" />
+    <node id="PENICILLIN PROCESS" />
+    <node id="MODERN ANTIBIOTICS" />
+    <node id="RECOMBINANT DNA" />
+    <node id="GENETICALLY ENGINEERED ORGANISM" />
+    <node id="STUDENT" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC MANIPULATION" />
+    <edge source="BIOTECHNOLOGY" target="BIOPROCESS ENGINEER" />
+    <edge source="BIOTECHNOLOGY" target="BIOENGINEERING" />
+    <edge source="BIOTECHNOLOGY" target="AGRICULTURAL ENGINEER" />
+    <edge source="BIOTECHNOLOGY" target="ENVIRONMENTAL ENGINEER" />
+    <edge source="BIOTECHNOLOGY" target="INDUSTRIAL ENGINEER" />
+    <edge source="BIOTECHNOLOGY" target="ELECTRICAL ENGINEER" />
+    <edge source="BIOTECHNOLOGY" target="CHEMICAL ENGINEER" />
+    <edge source="BIOTECHNOLOGY" target="CELL BIOLOGY" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC ALGORITHM" />
+    <edge source="BIOTECHNOLOGY" target="MOLECULAR BIOLOGY" />
+    <edge source="BIOTECHNOLOGY" target="PHARMACEUTICALS" />
+    <edge source="BIOTECHNOLOGY" target="CHEMICALS" />
+    <edge source="BIOTECHNOLOGY" target="FOOD" />
+    <edge source="BIOTECHNOLOGY" target="DIAGNOSTICS" />
+    <edge source="BIOTECHNOLOGY" target="ENGINEERING" />
+    <edge source="BIOTECHNOLOGY" target="MULTIDISCIPLINARY" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC THERAPY" />
+    <edge source="BIOTECHNOLOGY" target="CELL PATHWAYS" />
+    <edge source="BIOTECHNOLOGY" target="CELLULAR METABOLISM" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC ENGINEERING" />
+    <edge source="BIOTECHNOLOGY" target="MOLECULAR BIOCHEMISTRY" />
+    <edge source="BIOTECHNOLOGY" target="CELL CULTURE" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC TESTING" />
+    <edge source="BIOTECHNOLOGY" target="CELLULAR BIOLOGY" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC MODIFICATION" />
+    <edge source="BIOTECHNOLOGY" target="CELLULAR RESEARCH" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC SEQUENCING" />
+    <edge source="BIOTECHNOLOGY" target="CELLULAR GENETICS" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC ANALYSIS" />
+    <edge source="BIOTECHNOLOGY" target="CELLULAR GENOMICS" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC EDITING" />
+    <edge source="BIOTECHNOLOGY" target="CELLULAR BIOCHEMISTRY" />
+    <edge source="BIOTECHNOLOGY" target="CELLULAR IMMUNOLOGY" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC SCREENING" />
+    <edge source="BIOTECHNOLOGY" target="GENETIC DIAGNOSIS" />
+    <edge source="BIOTECHNOLOGY" target="BIOPROCESS ENGINEERING" />
+    <edge source="BIOTECHNOLOGY" target="PENICILLIN" />
+    <edge source="GENETIC MANIPULATION" target="BIOPROCESS ENGINEERING" />
+    <edge source="GENETIC MANIPULATION" target="BIOCHEMICAL ENGINEERING" />
+    <edge source="GENETIC MANIPULATION" target="BIOPROCESS ENGINEER" />
+    <edge source="BIOPROCESS ENGINEER" target="CHEMICAL ENGINEERING" />
+    <edge source="BIOPROCESS ENGINEER" target="BIOCHEMICAL ENGINEERING" />
+    <edge source="BIOPROCESS ENGINEER" target="MULTIDISCIPLINARY COLLABORATION" />
+    <edge source="BIOPROCESS ENGINEER" target="CELL BIOLOGY" />
+    <edge source="BIOPROCESS ENGINEER" target="MICROBIOLOGY" />
+    <edge source="BIOPROCESS ENGINEER" target="MOLECULAR BIOLOGY" />
+    <edge source="BIOPROCESS ENGINEER" target="BIOCHEMISTRY" />
+    <edge source="BIOPROCESS ENGINEER" target="PHYSICS" />
+    <edge source="BIOPROCESS ENGINEER" target="MATHEMATICAL SCIENCES" />
+    <edge source="BIOPROCESS ENGINEER" target="STATISTICS" />
+    <edge source="BIOPROCESS ENGINEER" target="EXPERIMENTAL TOOLS" />
+    <edge source="BIOPROCESS ENGINEER" target="QUALITATIVE RESULTS" />
+    <edge source="BIOPROCESS ENGINEER" target="LABORATORY TECHNIQUES" />
+    <edge source="BIOPROCESS ENGINEER" target="COMPLEX EXPERIMENTAL DATA" />
+    <edge source="BIOPROCESS ENGINEER" target="MATHEMATICAL THEORIES" />
+    <edge source="BIOPROCESS ENGINEER" target="QUANTITATIVE METHODS" />
+    <edge source="BIOPROCESS ENGINEER" target="ENGINEERING THEORIES" />
+    <edge source="BIOPROCESS ENGINEER" target="PHYSICAL SCIENCES" />
+    <edge source="BIOPROCESS ENGINEER" target="BIOLOGISTS" />
+    <edge source="BIOPROCESS ENGINEER" target="ENGINEERS" />
+    <edge source="BIOPROCESS ENGINEER" target="EXPERIMENTAL TOOLS DEVELOPMENT" />
+    <edge source="BIOPROCESS ENGINEER" target="CONTROL ALGORITHMS" />
+    <edge source="BIOPROCESS ENGINEER" target="MANUFACTURING STRATEGIES" />
+    <edge source="BIOPROCESS ENGINEER" target="SENSOR DEVELOPMENT" />
+    <edge source="BIOPROCESS ENGINEER" target="MULTIDISCIPLINARY PERSPECTIVES" />
+    <edge source="BIOPROCESS ENGINEER" target="DESIGNABLE COMPONENTS" />
+    <edge source="BIOPROCESS ENGINEER" target="LIVING CELLS OR COMPONENTS THEREOF" />
+    <edge source="BIOPROCESS ENGINEER" target="MACROMOLECULES" />
+    <edge source="BIOPROCESS ENGINEER" target="CHEMICAL PROCESSES" />
+    <edge source="BIOPROCESS ENGINEER" target="BIOLOGICAL REACTIONS" />
+    <edge source="BIOPROCESS ENGINEER" target="PHYSICAL PROCESSES" />
+    <edge source="BIOPROCESS ENGINEER" target="MODELING AND ANALYSIS" />
+    <edge source="BIOPROCESS ENGINEER" target="OPTIMIZATION" />
+    <edge source="BIOPROCESS ENGINEER" target="MONITORING BIOPROCESSES" />
+    <edge source="BIOPROCESS ENGINEER" target="EXPERIMENTAL DESIGN" />
+    <edge source="BIOPROCESS ENGINEER" target="DATA INTERPRETATION" />
+    <edge source="BIOPROCESS ENGINEER" target="MODEL DEVELOPMENT" />
+    <edge source="BIOPROCESS ENGINEER" target="ALGORITHMS FOR BIOPROCESSES" />
+    <edge source="BIOPROCESS ENGINEER" target="BIOCHEMICAL REACTIONS" />
+    <edge source="BIOPROCESS ENGINEER" target="PHYSIOLOGICAL PROCESSES" />
+    <edge source="BIOPROCESS ENGINEER" target="PENICILLIN PROCESS" />
+    <edge source="BIOPROCESS ENGINEER" target="MODERN ANTIBIOTICS" />
+    <edge source="CHEMICAL ENGINEER" target="PENICILLIN FERMENTATION" />
+    <edge source="CELL BIOLOGY" target="BIOLOGISTS" />
+    <edge source="CELL BIOLOGY" target="ENGINEERS" />
+    <edge source="BIOPROCESS ENGINEERING" target="MULTIDISCIPLINARY COLLABORATION" />
+    <edge source="BIOPROCESS ENGINEERING" target="BIOMOLECULAR ENGINEERING" />
+    <edge source="BIOPROCESS ENGINEERING" target="MICROORGANISM" />
+    <edge source="BIOPROCESS ENGINEERING" target="REACTOR DESIGN" />
+    <edge source="BIOPROCESS ENGINEERING" target="PRODUCT RECOVERY" />
+    <edge source="BIOPROCESS ENGINEERING" target="PURIFICATION TECHNIQUES" />
+    <edge source="BIOPROCESS ENGINEERING" target="PENICILLIN" />
+    <edge source="BIOCHEMICAL ENGINEERING" target="CHEMICAL ENGINEERING" />
+    <edge source="BIOCHEMICAL ENGINEERING" target="BIOMEDICAL ENGINEERING" />
+    <edge source="CELLS" target="METABOLIC ENGINEERING" />
+    <edge source="MULTIDISCIPLINARY COLLABORATION" target="MERCK" />
+    <edge source="MULTIDISCIPLINARY COLLABORATION" target="PENICILLIN FERMENTATION" />
+    <edge source="REACTOR DESIGN" target="PENICILLIN FERMENTATION" />
+    <edge source="PRODUCT RECOVERY" target="PENICILLIN" />
+    <edge source="PRODUCT RECOVERY" target="PENICILLIN FERMENTATION" />
+    <edge source="MICROBIOLOGY" target="BIOLOGISTS" />
+    <edge source="MICROBIOLOGY" target="ENGINEERS" />
+    <edge source="MICROBIOLOGY" target="PENICILLIN STRAINS" />
+    <edge source="BIOLOGISTS" target="ENGINEERS" />
+    <edge source="BIOLOGISTS" target="PENICILLIN" />
+    <edge source="BIOLOGISTS" target="ENGINEERING PRINCIPLES" />
+    <edge source="ENGINEERS" target="PENICILLIN" />
+    <edge source="PENICILLIN" target="ALEXANDER FLEMING" />
+    <edge source="PENICILLIN" target="SULFA DRUGS" />
+    <edge source="PENICILLIN" target="NORMAN HEATLEY" />
+    <edge source="PENICILLIN" target="BACK-EXTRACTION PROCESS" />
+    <edge source="PENICILLIN" target="WORLD WAR II" />
+    <edge source="PENICILLIN" target="FLOREY AND CHAIN" />
+    <edge source="PENICILLIN" target="CHEMICAL SYNTHESIS" />
+    <edge source="PENICILLIN" target="FERMENTATION PROCESS" />
+    <edge source="PENICILLIN" target="LOW CONCENTRATION IN BROTH" />
+    <edge source="PENICILLIN" target="NORTHERN REGIONAL RESEARCH LABORATORY" />
+    <edge source="PENICILLIN" target="CORN STEEP LIQUOR&#8211;LACTOSE-BASED MEDIUM" />
+    <edge source="PENICILLIN" target="SUBMERGED FERMENTATION" />
+    <edge source="PENICILLIN" target="PENICILLIN RECOVERY" />
+    <edge source="PENICILLIN" target="PENICILLIN STRAINS" />
+    <edge source="PENICILLIN" target="ANTIBIOTIC FERMENTATION" />
+    <edge source="PENICILLIN" target="PHARMACEUTICAL_PRODUCTION" />
+    <edge source="PENICILLIUM NOTATUM" target="STAPHYLOCOCCUS AUREUS" />
+    <edge source="PENICILLIUM NOTATUM" target="ALEXANDER FLEMING" />
+    <edge source="PENICILLIUM NOTATUM" target="MOLD" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL AGENT" />
+    <edge source="PENICILLIUM NOTATUM" target="BACTERIAL CULTURE PLATE" />
+    <edge source="PENICILLIUM NOTATUM" target="CRUDE EXTRACTION METHODS" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIMICROBIAL PROPERTIES" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBIOTICS" />
+    <edge source="PENICILLIUM NOTATUM" target="FUNGUS" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL SUBSTANCE" />
+    <edge source="PENICILLIUM NOTATUM" target="CRUDE EXTRACT" />
+    <edge source="PENICILLIUM NOTATUM" target="ACTIVE COMPOUND" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIMICROBIAL SUBSTANCE" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY PROCESS" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL ACTIVITY" />
+    <edge source="PENICILLIUM NOTATUM" target="BACTERIAL GROWTH INHIBITION" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIMICROBIAL ACTIVITY" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY OF ANTIMICROBIAL SUBSTANCE" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL AGENT PRODUCTION" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL SUBSTANCE ISOLATION" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS STEPS" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL AGENT SECRETED" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL AGENT CHARACTERIZATION" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS ISOLATION" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL AGENT SECRETED BY FUNGUS" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS CHARACTERIZATION" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL AGENT SECRETED BY FUNGAL SPECIES" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION AND ISOLATION" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL AGENT SECRETED BY FUNGAL SPECIES CHARACTERIZATION" />
+    <edge source="PENICILLIUM NOTATUM" target="DISCOVERY OF ANTIMICROBIAL SUBSTANCE PROCESS IDENTIFICATION, ISOLATION, AND CHARACTERIZATION" />
+    <edge source="PENICILLIUM NOTATUM" target="ANTIBACTERIAL AGENT SECRETED BY FUNGAL SPECIES IDENTIFICATION" />
+    <edge source="STAPHYLOCOCCUS AUREUS" target="BOILS" />
+    <edge source="STAPHYLOCOCCUS AUREUS" target="NUTRIENT SOLUTION" />
+    <edge source="ALEXANDER FLEMING" target="STMARY&#8217;S HOSPITAL" />
+    <edge source="STMARY&#8217;S HOSPITAL" target="CORBIS CORPORATION" />
+    <edge source="STMARY&#8217;S HOSPITAL" target="IMAGE" />
+    <edge source="STMARY&#8217;S HOSPITAL" target="DISCOVERY OF PENICILLIN" />
+    <edge source="CULTURE OF THE MICROORGANISM" target="HOWARD FLOREY" />
+    <edge source="HOWARD FLOREY" target="ERNST CHAIN" />
+    <edge source="FLOREY AND CHAIN" target="MERCK" />
+    <edge source="FLOREY AND CHAIN" target="PFIZER" />
+    <edge source="FLOREY AND CHAIN" target="SQUIBB" />
+    <edge source="FLOREY AND CHAIN" target="USDA NORTHERN REGIONAL RESEARCH LABORATORY" />
+    <edge source="PFIZER" target="SUBMERGED TANK PROCESS" />
+    <edge source="PFIZER" target="LARGE-SCALE FERMENTERS" />
+    <edge source="FERMENTATION PROCESS" target="PENICILLIN FERMENTATION" />
+    <edge source="FERMENTATION PROCESS" target="PHARMACEUTICAL PRODUCTION" />
+    <edge source="FERMENTATION PROCESS" target="A. L. ELDER" />
+    <edge source="FERMENTATION PROCESS" target="LOW TITER PRODUCTION" />
+    <edge source="FERMENTATION PROCESS" target="LARGE REACTORS" />
+    <edge source="FERMENTATION PROCESS" target="LOW RATE OF PRODUCTION" />
+    <edge source="FERMENTATION PROCESS" target="STABLE REACTORS" />
+    <edge source="PENICILLIN FERMENTATION" target="CHEMICAL SYNTHESIS" />
+    <edge source="PENICILLIN FERMENTATION" target="PENICILLIUM CHRYSOGENUM" />
+    <edge source="PENICILLIN FERMENTATION" target="BRAN METHOD" />
+    <edge source="PENICILLIN FERMENTATION" target="SURFACE METHOD" />
+    <edge source="PENICILLIN FERMENTATION" target="SUBMERGED TANK PROCESS" />
+    <edge source="PENICILLIN FERMENTATION" target="MICROORGANISMS" />
+    <edge source="CHEMICAL SYNTHESIS" target="UNPROVEN APPROACH" />
+    <edge source="PHARMACEUTICAL PRODUCTION" target="CLINICAL SUCCESS" />
+    <edge source="WAR PRODUCTION BOARD" target="A. L. ELDER" />
+    <edge source="SURFACE METHOD" target="BOTTLE PLANTS" />
+    <edge source="SUBMERGED TANK PROCESS" target="MECHANICAL SEAL" />
+    <edge source="SUBMERGED FERMENTATION" target="LARGE-SCALE FERMENTERS" />
+    <edge source="PENICILLIN RECOVERY" target="CHEMICAL_TRANSFORMATIONS" />
+    <edge source="PENICILLIN STRAINS" target="GENETIC_MANIPULATION" />
+    <edge source="PENICILLIN STRAINS" target="CELL_BIOLOGY" />
+    <edge source="PENICILLIN STRAINS" target="BIOMOLECULAR_ENGINEERING" />
+    <edge source="PENICILLIN FERMENTATION PROCESS" target="SUBMERGED_FERMENTATION" />
+    <edge source="PENICILLIN FERMENTATION PROCESS" target="BIOMEDICAL_ENGINEERING" />
+    <edge source="PENICILLIN FERMENTATION PROCESS" target="BIOSYSTEMS" />
+    <edge source="PENICILLIN FERMENTATION PROCESS" target="BIOPROCESSING" />
+    <edge source="SUBMERGED_FERMENTATION" target="LARGE TANKS" />
+    <edge source="MICROBIOLOGIST" target="METABOLIC PATHWAYS" />
+    <edge source="PENICILLIN PROCESS" target="RECOMBINANT DNA" />
+    <edge source="PENICILLIN PROCESS" target="GENETICALLY ENGINEERED ORGANISM" />
+    <edge source="PENICILLIN PROCESS" target="STUDENT" />
+  </graph>
+</graphml>

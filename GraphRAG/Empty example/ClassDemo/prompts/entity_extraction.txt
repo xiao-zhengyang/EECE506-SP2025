@@ -1,0 +1,99 @@
+
+-Goal-
+Given a text document that is potentially relevant to this activity and a list of entity types, identify all entities of those types from the text and all relationships among the identified entities.
+
+-Steps-
+1. Identify all entities. For each identified entity, extract the following information:
+- entity_name: Name of the entity, capitalized
+- entity_type: One of the following types: [microorganism, reactor design, product recovery, purification techniques, organization, medium, strain, manufacturing process, bioprocess engineer, biochemical engineering, biotechnology, antibiotic, fermentation, chemical synthesis, multidisciplinary collaboration, mold physiology, metabolic pathways, process control, reactor design, biological engineering, biomedical engineering, biomolecular engineering, bioprocess engineering, biochemical engineering, biotechnology, genetic manipulation, pharmaceutical production, chemical engineering, biological catalyst, bioreaction engineering, bioseparations, biologics, chemical transformations, molecular biology, biosystems, microbiology, biochemistry, cell biology, bioengineering, bioprocess, biotechnology, genetic manipulation, pharmaceuticals, chemicals, food, diagnostics, engineering, chemical synthesis, pilot-plant, fermentation process, chemical synthesis]
+- entity_description: Comprehensive description of the entity's attributes and activities
+Format each entity as ("entity"{tuple_delimiter}<entity_name>{tuple_delimiter}<entity_type>{tuple_delimiter}<entity_description>)
+
+2. From the entities identified in step 1, identify all pairs of (source_entity, target_entity) that are *clearly related* to each other.
+For each pair of related entities, extract the following information:
+- source_entity: name of the source entity, as identified in step 1
+- target_entity: name of the target entity, as identified in step 1
+- relationship_description: explanation as to why you think the source entity and the target entity are related to each other
+- relationship_strength: an integer score between 1 to 10, indicating strength of the relationship between the source entity and target entity
+Format each relationship as ("relationship"{tuple_delimiter}<source_entity>{tuple_delimiter}<target_entity>{tuple_delimiter}<relationship_description>{tuple_delimiter}<relationship_strength>)
+
+3. Return output in The primary language of the provided text is "English." as a single list of all the entities and relationships identified in steps 1 and 2. Use **{record_delimiter}** as the list delimiter.
+
+4. If you have to translate into The primary language of the provided text is "English.", just translate the descriptions, nothing else!
+
+5. When finished, output {completion_delimiter}.
+
+-Examples-
+######################
+
+Example 1:
+
+entity_types: [microorganism, reactor design, product recovery, purification techniques, organization, medium, strain, manufacturing process, bioprocess engineer, biochemical engineering, biotechnology, antibiotic, fermentation, chemical synthesis, multidisciplinary collaboration, mold physiology, metabolic pathways, process control, reactor design, biological engineering, biomedical engineering, biomolecular engineering, bioprocess engineering, biochemical engineering, biotechnology, genetic manipulation, pharmaceutical production, chemical engineering, biological catalyst, bioreaction engineering, bioseparations, biologics, chemical transformations, molecular biology, biosystems, microbiology, biochemistry, cell biology, bioengineering, bioprocess, biotechnology, genetic manipulation, pharmaceuticals, chemicals, food, diagnostics, engineering, chemical synthesis, pilot-plant, fermentation process, chemical synthesis]
+text:
+ needed, and the mechanical seal for the agitator shaft had to be carefully designed to prevent the entry of microorganisms. Even today, issues of oxygen supply and heat removal remain critical constraints in the design of antibiotic fermenters, and contamination by foreign organisms can degrade the product as quickly as it is formed, consume nutrients before they are converted to penicillin, or even produce toxins.
+
+In addition to these reactor design challenges, there were similar hurdles in product recovery and purification. The fragile nature of penicillin necessitated the development of special techniques—one successful approach being a combination of pH shifts and rapid liquid–liquid extraction.
+
+Soon processes using tanks of about 10,000 gallons were built. Pfizer, for example, completed within six months the first plant for commercial production of penicillin by submerged fermentation. This plant contained 14 tanks, each with a capacity of 7,000 gallons. Later, large-scale fermenters—typically ranging from 50,000 to 100,000
+------------------------
+output:
+("entity"{tuple_delimiter}MICROORGANISMS{tuple_delimiter}MICROORGANISM{tuple_delimiter}Microorganisms are entities that can contaminate fermenters, degrade products, consume nutrients, or produce toxins in the fermentation process)
+{record_delimiter}
+("entity"{tuple_delimiter}REACTOR DESIGN{tuple_delimiter}REACTOR DESIGN{tuple_delimiter}Reactor design involves addressing issues such as oxygen supply, heat removal, and contamination prevention in antibiotic fermenters)
+{record_delimiter}
+("entity"{tuple_delimiter}ANTIBIOTIC FERMENTERS{tuple_delimiter}FERMENTATION{tuple_delimiter}Antibiotic fermenters are systems designed to produce antibiotics like penicillin, facing challenges like oxygen supply, heat removal, and contamination)
+{record_delimiter}
+("entity"{tuple_delimiter}PRODUCT RECOVERY{tuple_delimiter}PRODUCT RECOVERY{tuple_delimiter}Product recovery involves techniques to extract and purify products like penicillin from fermentation processes)
+{record_delimiter}
+("entity"{tuple_delimiter}PURIFICATION TECHNIQUES{tuple_delimiter}PURIFICATION TECHNIQUES{tuple_delimiter}Purification techniques are methods developed to purify fragile products like penicillin, including pH shifts and liquid-liquid extraction)
+{record_delimiter}
+("entity"{tuple_delimiter}PENICILLIN{tuple_delimiter}ANTIBIOTIC{tuple_delimiter}Penicillin is a fragile antibiotic that requires special techniques for recovery and purification during production)
+{record_delimiter}
+("entity"{tuple_delimiter}PFIZER{tuple_delimiter}ORGANIZATION{tuple_delimiter}Pfizer is a company that built the first plant for commercial production of penicillin using submerged fermentation)
+{record_delimiter}
+("entity"{tuple_delimiter}SUBMERGED FERMENTATION{tuple_delimiter}FERMENTATION{tuple_delimiter}Submerged fermentation is a process used for the commercial production of penicillin, involving large tanks and controlled conditions)
+{record_delimiter}
+("relationship"{tuple_delimiter}MICROORGANISMS{tuple_delimiter}ANTIBIOTIC FERMENTERS{tuple_delimiter}Microorganisms can contaminate antibiotic fermenters, affecting the quality and yield of the product{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}REACTOR DESIGN{tuple_delimiter}ANTIBIOTIC FERMENTERS{tuple_delimiter}Reactor design is crucial for addressing challenges in antibiotic fermenters, such as oxygen supply and contamination{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}PRODUCT RECOVERY{tuple_delimiter}PENICILLIN{tuple_delimiter}Product recovery techniques are essential for extracting penicillin from fermentation processes{tuple_delimiter}8)
+{record_delimiter}
+("relationship"{tuple_delimiter}PURIFICATION TECHNIQUES{tuple_delimiter}PENICILLIN{tuple_delimiter}Purification techniques are necessary to purify penicillin due to its fragile nature{tuple_delimiter}9)
+{record_delimiter}
+("relationship"{tuple_delimiter}PFIZER{tuple_delimiter}SUBMERGED FERMENTATION{tuple_delimiter}Pfizer utilized submerged fermentation for the commercial production of penicillin{tuple_delimiter}7)
+{completion_delimiter}
+#############################
+
+
+Example 2:
+
+entity_types: [microorganism, reactor design, product recovery, purification techniques, organization, medium, strain, manufacturing process, bioprocess engineer, biochemical engineering, biotechnology, antibiotic, fermentation, chemical synthesis, multidisciplinary collaboration, mold physiology, metabolic pathways, process control, reactor design, biological engineering, biomedical engineering, biomolecular engineering, bioprocess engineering, biochemical engineering, biotechnology, genetic manipulation, pharmaceutical production, chemical engineering, biological catalyst, bioreaction engineering, bioseparations, biologics, chemical transformations, molecular biology, biosystems, microbiology, biochemistry, cell biology, bioengineering, bioprocess, biotechnology, genetic manipulation, pharmaceuticals, chemicals, food, diagnostics, engineering, chemical synthesis, pilot-plant, fermentation process, chemical synthesis]
+text:
+ In 1939, the final concentration in a typical penicillin fermentation broth was only about 0.001 g/l. Furthermore, penicillin is a fragile, unstable product, which imposed significant constraints on recovery and purification methods.
+
+Life scientists at the Northern Regional Research Laboratory made many major contributions to the penicillin program. One breakthrough was the development of a corn steep liquor–lactose-based medium that increased productivity about tenfold. A worldwide search by the laboratory for better producer strains of Penicillium led to the isolation of a Penicillium chrysogenum strain—recovered from a moldy cantaloupe at a Peoria fruit market—that proved superior to hundreds of other isolates. Its progeny have been used in almost all commercial penicillin fermentations.
+
+Another major hurdle was deciding on a manufacturing process. One method involved growing the mold on the surface of moist bran, but this “bran method” was discarded because of difficulties with temperature
+------------------------
+output:
+("entity"{tuple_delimiter}PENICILLIN{tuple_delimiter}ANTIBIOTIC{tuple_delimiter}Penicillin is a fragile, unstable antibiotic product that was initially produced in low concentrations in fermentation broths{record_delimiter}
+("entity"{tuple_delimiter}NORTHERN REGIONAL RESEARCH LABORATORY{tuple_delimiter}ORGANIZATION{tuple_delimiter}The Northern Regional Research Laboratory made significant contributions to the penicillin program, including developing a more productive medium and searching for better producer strains{record_delimiter}
+("entity"{tuple_delimiter}CORN STEEP LIQUOR–LACTOSE-BASED MEDIUM{tuple_delimiter}MEDIUM{tuple_delimiter}A medium developed to increase penicillin productivity about tenfold{record_delimiter}
+("entity"{tuple_delimiter}PENICILLIUM CHRYSOGENUM{tuple_delimiter}STRAIN{tuple_delimiter}A superior strain of Penicillium isolated from a moldy cantaloupe, used in commercial penicillin fermentations{record_delimiter}
+("entity"{tuple_delimiter}PENICILLIN FERMENTATION{tuple_delimiter}FERMENTATION PROCESS{tuple_delimiter}The process of producing penicillin, initially yielding low concentrations, but improved through better strains and media{record_delimiter}
+("entity"{tuple_delimiter}BRAN METHOD{tuple_delimiter}MANUFACTURING PROCESS{tuple_delimiter}A method involving growing mold on moist bran, discarded due to temperature control difficulties{record_delimiter}
+("relationship"{tuple_delimiter}PENICILLIN{tuple_delimiter}NORTHERN REGIONAL RESEARCH LABORATORY{tuple_delimiter}The Northern Regional Research Laboratory contributed to the penicillin program by improving production methods{tuple_delimiter}8{record_delimiter}
+("relationship"{tuple_delimiter}CORN STEEP LIQUOR–LACTOSE-BASED MEDIUM{tuple_delimiter}PENICILLIN{tuple_delimiter}The medium increased the productivity of penicillin production tenfold{tuple_delimiter}9{record_delimiter}
+("relationship"{tuple_delimiter}PENICILLIUM CHRYSOGENUM{tuple_delimiter}PENICILLIN FERMENTATION{tuple_delimiter}The strain is used in almost all commercial penicillin fermentations due to its superior productivity{tuple_delimiter}9{record_delimiter}
+("relationship"{tuple_delimiter}BRAN METHOD{tuple_delimiter}PENICILLIN FERMENTATION{tuple_delimiter}The bran method was considered for penicillin fermentation but was discarded due to temperature control issues{tuple_delimiter}5{completion_delimiter}
+#############################
+
+
+
+-Real Data-
+######################
+entity_types: [microorganism, reactor design, product recovery, purification techniques, organization, medium, strain, manufacturing process, bioprocess engineer, biochemical engineering, biotechnology, antibiotic, fermentation, chemical synthesis, multidisciplinary collaboration, mold physiology, metabolic pathways, process control, reactor design, biological engineering, biomedical engineering, biomolecular engineering, bioprocess engineering, biochemical engineering, biotechnology, genetic manipulation, pharmaceutical production, chemical engineering, biological catalyst, bioreaction engineering, bioseparations, biologics, chemical transformations, molecular biology, biosystems, microbiology, biochemistry, cell biology, bioengineering, bioprocess, biotechnology, genetic manipulation, pharmaceuticals, chemicals, food, diagnostics, engineering, chemical synthesis, pilot-plant, fermentation process, chemical synthesis]
+text: {input_text}
+######################
+output:
