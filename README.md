@@ -15,7 +15,7 @@ GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads t
 4. **Install Jupyter Lab.**  
    Run the following command in the terminal.
    ```bash
-   pip install jupyter lab
+   pip install jupyterlab
    ```
 
 5. **Install GraphRAG.**  
