@@ -1,3 +1,8 @@
+# AI-literacy Course module
+Powerpoint Slides are provided.
+![image](https://github.com/user-attachments/assets/93ab9c43-bb37-48ff-a345-acbba889b2ba)
+
+
 # GraphRAG tutorial
 
 GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads text and organizes it into knowledge graphs for better AI information retrieval.
