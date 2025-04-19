@@ -1,5 +1,5 @@
 # AI-literacy Course module
-Powerpoint Slides are provided.
+Powerpoint slides are provided in this page.
 ![image](https://github.com/user-attachments/assets/93ab9c43-bb37-48ff-a345-acbba889b2ba)
 
 
