@@ -57,7 +57,7 @@ GraphRAG is an advanced retrieval-augmented generation (RAG) system that reads t
     ollama create qwen2.5:7b_4k -f settings.txt
     ```
 
-11. **Download the ClassDemo example from Canvas.**
+11. **Download the ClassDemo example from GitHub.**
 
 12. **[Optional] In the ClassDemo example, open settings.yaml and inspect the settings to make sure:**  
     - The correct LLM model loaded.
