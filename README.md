@@ -3,6 +3,7 @@ Powerpoint slides are provided on this page. https://github.com/xiao-zhengyang/E
 ![image](https://github.com/user-attachments/assets/93ab9c43-bb37-48ff-a345-acbba889b2ba)
 
 **If you find this content helpful, please cite us!**
+
 Generative AI in Graduate Bioprocess Engineering Exams: Is Attention All Students Need?  Under review in Education for Chemical Engineers
 
 # GraphRAG tutorial
