@@ -2,6 +2,8 @@
 Powerpoint slides are provided on this page. https://github.com/xiao-zhengyang/EECE506-SP2025/blob/main/LLM%20introduction%20and%20application%20course%20V0.pptx
 ![image](https://github.com/user-attachments/assets/93ab9c43-bb37-48ff-a345-acbba889b2ba)
 
+**If you find this content helpful, please cite us!**
+Generative AI in Graduate Bioprocess Engineering Exams: Is Attention All Students Need?  Under review in Education for Chemical Engineers
 
 # GraphRAG tutorial
 
